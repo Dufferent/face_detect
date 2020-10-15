@@ -1,0 +1,10 @@
+《生成vec文件》
+opencv_createsamples.exe -vec 
+D:\Baidu-donwload\opencv\project\facedetect\facedetect\data\trans-data\myface.vec 
+-info D:\Baidu-donwload\opencv\project\facedetect\facedetect\data\face\face.txt  
+-num 150  -w 20 -h 20
+《生成xml文件》
+opencv_traincascade.exe -data D:\Baidu-donwload\opencv\project\facedetect\facedetect\data\trans-data\ -vec 
+D:\Baidu-donwload\opencv\project\facedetect\facedetect\data\trans-data\myface.vec 
+-bg bg.txt -numPos 150 -numNeg 450 -maxFalseAlarmRate 0.05 
+-w 20 -h 20 -mode ALL -precalcValBufSize 3072 -precalcIdxBufSize 2048 -numStages 5
